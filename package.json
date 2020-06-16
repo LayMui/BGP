@@ -1,0 +1,62 @@
+{
+  "name": "acceptance-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "serenity-bdd update",
+    "clean": "rimraf target",
+    "test": "failsafe clean test:execute test:report",
+    "test:execute": "protractor ./protractor.conf.js",
+    "test:execute:wip": "protractor ./protractor.conf.js --cucumberOpts.tags=@wip",
+    "test:dev": "protractor --baseUrl=https://dev.example.com",
+    "test:report": "serenity-bdd run --features ./src/features",
+    "ui": "failsafe clean test:execute:ui test:report",
+    "lint": "tslint --project tsconfig.json --format stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BGP-test-automation.git"
+  },
+  "keywords": [
+    "serenity-js",
+    "bdd",
+    "cucumber",
+    "protractor",
+    "testing"
+  ],
+  "author": "LayMui",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/BGP-test-automation/issues"
+  },
+  "engines": {
+    "node": ">= 10",
+    "npm": ">= 6"
+  },
+  "dependencies": {
+    "@serenity-js/assertions": "^2.0.0",
+    "@serenity-js/console-reporter": "^2.0.0",
+    "@serenity-js/core": "^2.0.0",
+    "@serenity-js/cucumber": "^2.0.0",
+    "@serenity-js/protractor": "^2.0.0",
+    "@serenity-js/rest": "^2.0.0",
+    "@serenity-js/serenity-bdd": "^2.0.0",
+    "@types/cucumber": "^6.0.0",
+    "@types/node": "^12.12.26",
+    "axios": "^0.19.2",
+    "cucumber": "^6.0.5",
+    "is-ci": "^2.0.0",
+    "npm-failsafe": "^0.4.1",
+    "protractor": "^5.4.2",
+    "rimraf": "^3.0.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^5.20.1",
+    "tslint-microsoft-contrib": "^6.2.0",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "chromedriver": "^83.0.0",
+    "geckodriver": "^1.19.1"
+  }
+}
