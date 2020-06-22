@@ -15,7 +15,7 @@ Feature: Form Submission
        | Tan Ah Kow | Manager | 98765432 | tan@hotmail.com | tan@gmail.com |
     And he has filled in the proposal form
       | project_title | start_date | end_date | project_description | activity | target_market | 
-      | Participate in F1 formula | 20 Jun 2020 | 02 Sep 2020 | auto racing activity | Market Entry | Singapore |
+      | Participate in F1 formula | 20 Jul 2020 | 02 Sep 2020 | auto racing activity | Market Entry | Singapore |
     And he has filled in the business impact form
       | FY_endDate | overseas_sales | overseas_investments | rationale | non_tangible_benefits| 
        | 30 Jun 2020 | 23000,25000,24000,30000 | 23000,23000,23000,23000 | to increase revenue | publicity |

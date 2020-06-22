@@ -58,7 +58,7 @@ exports.config = {
         //tags:    ['@us3ac1'],
         //tags:    ['@us3ac2'],
         //tags:    ['@us3ac3'],
-        //tags:    ['@us3ac4'],
+        tags:    ['@us3ac4'],
         strict:  false,
         format: ["pretty"], 
     },
