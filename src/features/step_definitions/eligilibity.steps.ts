@@ -146,13 +146,16 @@ When(/^(?:he|she|they) click on the FAQ link$/, () =>
         .andIfSo(Click.on(EligibilityPage.FAQLink)),
 ));
 
-Then(/^(?:he|she|they) should be redirected to the web url "(.*)" in another window tab$/, (url: string) =>
-            actorInTheSpotlight().attemptsTo(
-                Wait.for(Duration.ofMilliseconds(10000)),
-                // BrowseTheWeb.as(actorInTheSpotlight()).switchTo().window(tabs.get(1)),
-                //protractor.browser.switchTo().window(tabs.get(1)),
-                Log.the('Using SerenityJS API for driver.switchTo().window(tabs.get(1))')  
- ));
+Then(/^(?:he|she|they) should be redirected to the web url "(.*)" in another window tab$/, async (url: string) =>
+    actorInTheSpotlight().attemptsTo(
+         await protractor.browser.getAllWindowHandles().then(function (handles) {
+            protractor.browser.waitForAngularEnabled(false);
+            return protractor.browser.switchTo().window(handles[1]);
+        })
+            .then(function () {
+                return Ensure.that(Website.url(), equals(url));
+            }),
+    ));
 
 When(/^(?:he|she|they) select Yes to all 4 questions and click Save to save all his inputs$/, () =>
     actorInTheSpotlight().attemptsTo(

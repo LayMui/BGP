@@ -1,5 +1,5 @@
 import { Task } from '@serenity-js/core';
-import { Click, Enter, Press, Scroll, DoubleClick } from '@serenity-js/protractor';
+import { Click, Enter, Press, Scroll, } from '@serenity-js/protractor';
 import { protractor } from 'protractor';
 import { ProposalPage } from '../pageObjects';
 
@@ -15,10 +15,10 @@ export const FillInProposalForm = {
         Scroll.to(ProposalPage.activity),
         Click.on(ProposalPage.activity),
         Enter.theValue(activity).into(ProposalPage.inputComboBoxValueForActivity),
-      //  Press.the(protractor.Key.ENTER).in(ProposalPage.inputComboBoxForActivity),
+      //  Press.the(protractor.Key.ENTER).in(ProposalPage.inputComboBoxValueForActivity),
         Click.on(ProposalPage.targetMarket),
         Enter.theValue(targetMarket).into(ProposalPage.inputComboBoxValueForTargetMarket),
-      //  Press.the(protractor.Key.ENTER).in(ProposalPage.inputComboBoxForTargetMarket),
+       // Press.the(protractor.Key.ENTER).in(ProposalPage.inputComboBoxForTargetMarket),
         Click.on(ProposalPage.firstTimeExpandYes),
         Click.on(ProposalPage.saveBtn),
         Click.on(ProposalPage.nextBtn))

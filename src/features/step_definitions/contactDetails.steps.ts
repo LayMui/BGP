@@ -217,7 +217,7 @@ Then(/^(?:he|she|they) should able to save his contact details$/, () =>
 
 When(/^(?:he|she|they) refresh the contact detail page$/, async () =>
 actorInTheSpotlight().attemptsTo(
-    Navigate.to(await protractor.browser.getCurrentUrl()),   
+    Navigate.to(await protractor.browser.getCurrentUrl()),
 ));
 
 Then(/^(?:he|she|they) should see the page refreshed with the saved values name "(.*)" job title "(.*)" contact no "(.*)" email "(.*)" alternate email "(.*)" postal code "(.*)" blk "(.*)" street "(.*)" level "(.*)" unit "(.*)"/, (name: string, jobTitle: string, contactNo: string, email: string, alternateEmail: string, postalCode: string, blk: string, street: string, level: string, unit: string) =>

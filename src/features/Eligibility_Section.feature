@@ -75,7 +75,7 @@ Feature: Eligibility Section
 
     Examples:
       | nric | name | uen | role | sector | development | functional | question | url |
-      | S1234567A | Tan Ah Kow | BDPQEDEMO | Acceptor | IT | International Expansion | Market Readiness Assistance | 1 | https://www.smeportal.sg/content/smeportal/en/moneymatters.html#saText |
+      | S1234567A | Tan Ah Kow | BDPQEDEMO | Acceptor | IT | International Expansion | Market Readiness Assistance | 1 | https://www.ifaq.gov.sg/BGP/apps/fcd_faqmain.aspx#FAQ_1111145 |
 
   @us1ac5
   Scenario Outline: Clicking ‘Save’ will Applicant’s eligibility inputs and refreshing the page should reload the saved values.
